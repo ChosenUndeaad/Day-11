@@ -205,13 +205,33 @@ console.log(result.Title);
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
+let moviesNumber = (movies) => {
+  return movies.length;
+};
+
+console.log(moviesNumber(movies));
+
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 
+let moviesTitles = (movies) => {
+  return movies.map((movie) => movie.Title);
+};
+
+console.log(moviesTitles(movies));
+
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+
+let currentYearMovies = (movies) => {
+  return movies
+    .filter((movies) => movies.year === 2025)
+    .map((movies) => movies.title);
+};
+
+console.log(currentYearMovies(movies));
 
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
