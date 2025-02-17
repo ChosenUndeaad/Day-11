@@ -46,8 +46,8 @@ const sumOfNumbers = (numbersArray) => {
   return totalSum;
 };
 
-const result = sumOfNumbers([5, 10, 30]);
-console.log("Total is: " + result);
+const results = sumOfNumbers([5, 10, 30]);
+console.log("Total is: " + results);
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
@@ -185,6 +185,21 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+
+let oldestMovie = (moviesArray) => {
+  let oldest = moviesArray[0];
+
+  moviesArray.forEach((movie) => {
+    if (movie.year < oldest.year) {
+      oldest = movie;
+    }
+  });
+
+  return oldest;
+};
+
+let result = oldestMovie(movies);
+console.log(result.Title);
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
