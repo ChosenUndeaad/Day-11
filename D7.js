@@ -57,10 +57,27 @@ console.log("Total is: " + results);
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
 
+let myNumbers = [1, 3, 94, 32, 15, 60];
+let singleNum = 16;
+
+const finalNumbers = myNumbers.map((number) => {
+  return number + singleNum;
+});
+
+console.log(finalNumbers);
+
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+
+const mySentence = ["I", "love", "Bloodborne"];
+
+const wordLetters = mySentence.map((sentence) => {
+  return sentence.length;
+});
+
+console.log("I love Bloodborne: ", wordLetters);
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
